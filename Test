@@ -1,0 +1,9 @@
+Rec=CEntityManager.GetEntity ("QCitems").GetEntityList("","","","");
+<Test.Numbers>=Rec.Length;
+for (I=0; I < Rec.Length; I++)
+{
+
+var NewRec=Me.addRelation("Test.QC");
+NewRec.setXPath("QCitem",Rec[I].Attributes["Items"].Value);
+
+}
